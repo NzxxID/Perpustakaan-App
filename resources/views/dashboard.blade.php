@@ -3,8 +3,67 @@
 @section('title', 'Dashboard')
 
 @section('content')
-    <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, nobis odio! Tenetur distinctio illum, sed tempora deleniti itaque nostrum. Quia atque repellendus eligendi porro necessitatibus ratione voluptatibus rerum? Neque possimus perspiciatis deleniti nam voluptatem a, aspernatur incidunt quisquam voluptates in sunt velit autem culpa nostrum officiis, maiores assumenda! Dolor, esse dicta, suscipit ducimus voluptate fugiat neque vitae cumque repellat quasi enim nesciunt iusto. Vero iure a dolorem molestias tempore ab iusto, fuga unde eligendi totam sapiente quaerat officia esse quas quam, voluptatem dolorum ullam! Animi qui aliquid porro repellendus explicabo assumenda tempore magni, eveniet fugiat natus expedita modi nam amet quasi quis facere delectus rerum magnam consectetur cum, iusto libero quam corrupti. Possimus dolores cupiditate dolore quam deserunt enim repudiandae illum debitis magni. Itaque quaerat nesciunt nostrum vel. Hic et odit modi expedita adipisci? Ullam earum, obcaecati quas accusamus sunt modi consequatur voluptate laudantium alias ratione rerum, atque nesciunt. Eos quasi qui omnis pariatur eveniet officia impedit laboriosam libero quisquam, facilis dolore expedita culpa, totam alias itaque quo! Voluptatibus dignissimos quod itaque praesentium ut consequatur reprehenderit velit ipsam illo, id veniam, dicta suscipit maxime modi. Eius cumque sunt dolorem molestias assumenda similique veniam consectetur dolore, possimus alias explicabo amet hic dolores ea quos sit nihil incidunt! Voluptatem, vitae autem repellat doloribus voluptates quaerat, omnis eligendi nisi reiciendis porro deserunt fugit iusto harum labore qui molestias totam quis excepturi dolorum quam. Dolore reiciendis magnam qui iste ex pariatur praesentium unde temporibus voluptates? Assumenda aliquam optio accusamus laboriosam quaerat natus non dicta culpa deleniti quod! Soluta excepturi culpa, quaerat aspernatur architecto mollitia modi quas nihil laborum aperiam. Eos possimus quod corrupti aliquam fuga obcaecati sapiente at optio vel similique alias doloremque eum necessitatibus vitae omnis laudantium repellat, perferendis iste quas minus a. Expedita facere blanditiis placeat omnis reiciendis impedit rerum maxime! Dolor?
-    </p>
+
+        <h1>Welcome, {{Auth::user()->username}}</h1>
+
+        <div class="row mt-3">
+            <div class="col-lg-4">
+                <div class="card-data book">
+                    <div class="row">
+                        <div class="col-6"><i class="bi bi-journal-bookmark"></i></div>
+                        <div class="col-6 d-flex flex-column justify-content-center align-items-end">
+                            <div class="card-desc">Books</div>
+                            <div class="card-coun">{{$book_count}}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card-data category">
+                    <div class="row">
+                        <div class="col-6"><i class="bi bi-list"></i></div>
+                        <div class="col-6 d-flex flex-column justify-content-center align-items-end">
+                            <div class="card-desc">Categories</div>
+                            <div class="card-coun">{{$category_count}}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card-data user">
+                    <div class="row">
+                        <div class="col-6"><i class="bi bi-people"></i></div>
+                        <div class="col-6 d-flex flex-column justify-content-center align-items-end">
+                            <div class="card-desc">Users</div>
+                            <div class="card-coun">{{$user_count}}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-3">
+            <h2>#Rent Log</h2>
+
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>No.</th>
+                        <th>User</th>
+                        <th>Book Title</th>
+                        <th>Rent Date</th>
+                        <th>Return Date</th>
+                        <th>Actual Return Date</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td colspan="7" style="text-align: center">No data</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
 @endsection
     
