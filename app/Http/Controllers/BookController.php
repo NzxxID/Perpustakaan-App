@@ -24,6 +24,14 @@ class BookController extends Controller
             'title' => 'required|max:255'
         ]);
 
+        $newName = '';
+        if($request->file('image')) {
+            $extension = $request->file('image')->getClientOriginalExtension();
+            $newName = $request->title.'-'.now()->timestamp.'.' .$extension;
+            $request->file('image')->storeAS('cover', $newName);
+        }
+
+        $request['cover'] = $newName;
         $book = Book::create($request->all());
         return redirect('books')->with('status', 'Book Added Succesfully');
     }

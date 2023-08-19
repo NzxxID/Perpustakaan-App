@@ -26,8 +26,8 @@
                 <input type="text" name="title" id="title" class="form-control" placeholder="Book's Title" value="{{ old('title') }}">
             </div>
             <div>
-                <label for="cover" class="form-label">Cover</label>
-                <input type="file" name="cover" class="form-control">
+                <label for="image" class="form-label">Image</label>
+                <input type="file" name="image" class="form-control">
             </div>
             <div class="mt-3">
                 <button class="btn btn-success" type="submit">Save</button>
