@@ -55,3 +55,7 @@
 .card-count {
     font-size: 25px;
 }
+.container-fluid .brand {
+    width: 300px; /* Lebar gambar 300 piksel */
+    height: auto; /* Tinggi menyesuaikan agar gambar tidak terdistorsi */
+}

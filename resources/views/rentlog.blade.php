@@ -1,10 +1,12 @@
 @extends('layouts.mainlayout')
 
-@section('title', 'Dashboard')
+@section('title', 'Rent Log')
 
 @section('content')
-    <p>
-        rent log
-    </p>
+    <h1>Rent Log List</h1>
+
+    <div class="mt-5">
+        <x-rent-log-table :rentlog='$rent_logs'/>
+    </div>
 @endsection
     

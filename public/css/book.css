@@ -1,0 +1,7 @@
+.img {
+    width: 200px; /* Atur lebar gambar sesuai kebutuhan */
+    height: auto; /* Biarkan tinggi otomatis agar gambar tidak terdistorsi */
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+}

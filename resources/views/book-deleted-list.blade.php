@@ -1,13 +1,12 @@
 @extends('layouts.mainlayout')
 
-@section('title', ' Book')
+@section('title', 'Deleted Book')
 
 @section('content')
-    <h1>Book List</h1>
+    <h1>Deleted Book List</h1>
 
-    <div class="my-5 d-flex justify-content-end">
-        <a href="book-deleted" class="btn btn-secondary me-3">View Deleted Data</a>
-        <a href="book-add" class="btn btn-primary">Add Data</a>
+    <div class="mt-2 d-flex justify-content-end">
+        <a href="/books" class="btn btn-primary">Back</a>
     </div>
 
     <div class="mt-2">
@@ -25,26 +24,17 @@
                     <th>No</th>
                     <th>Code</th>
                     <th>Title</th>
-                    <th>Category</th>
-                    <th>Status</th>
                     <th>Action</th>
                 </tr>
             </thead>
             <tbody>
-                @foreach ($books as $item)
+                @foreach ($deletedBooks as $item)
                     <tr>
                         <td>{{$loop->iteration}}</td>
                         <td>{{$item->book_code}}</td>
                         <td>{{$item->title}}</td>
                         <td>
-                            @foreach ($item->categories as $category)
-                            {{$category->name}} <br> 
-                            @endforeach
-                        </td>
-                        <td>{{$item->status}}</td>
-                        <td>
-                            <a href="/book-edit/{{$item->slug}}">Edit</a>
-                            <a href="/book-delete/{{$item->slug}}">Delete</a>
+                            <a href="/book-restore/{{$item->slug}}">Restore</a>
                         </td>
                     </tr>
                 @endforeach
